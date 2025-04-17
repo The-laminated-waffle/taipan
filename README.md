@@ -2,7 +2,7 @@
 
 A small, modular python image effect framework.
 
-## FEATURES
+## Features
 - Effect bundles - collections of premade effects/post effects
 - HSL <-> RGB conversion (In progress)
 - Post effects - E.g Exposure
