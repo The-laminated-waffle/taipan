@@ -95,3 +95,10 @@ def CASCADE(clearflag=1):
         effects.clear()
     effects.shift((0, 1, 0), (0, 1, 0), (0, 1, 0))
     post_effects.exposure()
+
+def SHARD(Hshift=50):
+    effects.clear(255)
+    effects.channelise((1, Hshift))
+    post_effects.posterisation()
+    effects.invert()
+    effects.shift((1, 1, 0), (1, 1, 0), (1, 1, 0), 1, 1, 20, 40)

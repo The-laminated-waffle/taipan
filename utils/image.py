@@ -60,7 +60,7 @@ def preset_image_loading(image_index, screen):
     }
     if image_index[0] >= 0 and image_index[0] < len(image_folder):
         try:
-            background = pygame.image.load(image_folder[image_index[0]]).convert_alpha()
+            background = pygame.image.load(f"/Users/home/Desktop/Python/taipan/images/{image_folder[image_index[0]]}").convert_alpha()
             pos = (200, 200) if image_index[0] not in special_positions else special_positions[image_index[0]]
             screen.blit(background, (pos))
             pygame.display.flip()

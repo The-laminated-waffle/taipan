@@ -279,5 +279,27 @@ def posterisation(initband=config.palette):
         screen.set_at(pos, color)
 
 
+def delete(savecolors, fillcolor=(0, 0, 0)):
+
+    list_fill = []
+
+    for x in range(ScreenW):
+        for y in range(ScreenH):
+            r, g, b, _ = screen.get_at((x, y))
+            
+            if r + g + b == 0:
+                if (r, g, b) not in savecolors:
+                    color = fillcolor
+                    list_fill.append(((x, y), color))
+
+                else:
+                    color = r, g, b
+                    list_fill.append(((x, y), color))
+
+    screen.fill((0, 0, 0))
+    for pos, color in list_fill:
+        screen.set_at(pos, color)
+
+
             
 
