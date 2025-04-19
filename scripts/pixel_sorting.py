@@ -3,11 +3,11 @@ from taipan import config
 
 pygame.init()
 
-user_choice = 1
+user_choice = 0
 if user_choice:
     image_index = int(input("Pick an image type, -1 if you wan't to load saved images.")), int(input("Pick 0 for non saving or 1 for saving."))
 else:
-    image_index = 13, 0
+    image_index = 14, 0
 
 config.ScreenW, config.ScreenH = 800, 800
 config.screen = pygame.display.set_mode((config.ScreenW, config.ScreenH))
@@ -23,7 +23,6 @@ if image_index[0] == -1:
 image.preset_image_loading(image_index, config.screen)
     
 '''-----Running image effects-----'''
-bundles.SHARD()
 '''-----Running image effects-----'''
 
 '''-----Image display-----'''
